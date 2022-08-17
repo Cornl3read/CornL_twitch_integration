@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xml>
+	<ModInfo>
+		<Name value="cornl3reads_twitch_revenue_7days_v01" />
+		<Description value="Twitch integration changes to do things when things happen. (testing version for Atalakus)" />
+		<Author value="Cornl3read.official@gmail.com" />
+		<Version value="1.0" />
+		<Website value="https://Stiki.dev" />
+	</ModInfo>
+</xml>

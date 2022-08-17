@@ -1,0 +1,108 @@
+<config>
+	<append xpath="/twitch_events">
+
+<!-- Bit Events
+    event_title - The title that shows in chat when the event fires.
+    event_name - The game event that is activated.
+    sp_add_amount - The amount of special points added when this is activated. (Bits already add SP by default based on number of bits.)
+    pp_add_amount - The amount of pimp points added when this is activated. (Bits already add SP by default based on number of bits.)
+    start_amount - The minimum amount to start the event.
+    end_amount - The maximum amount to start the event.
+    safe_allowed - If it's allowed to be used in safe zone, if not it queues.
+    cooldown_allowed - If it's allowed to be used during cooldown, if not it queues.
+    vote_allowed - If it's allowed to be used during vote event, if not it queues.
+    pimp_pot_add - Adds the amount to the pimp pot.
+
+-->
+    <!-- Dey Gave Some Bitses to the precious -->
+        <bit_event event_title="Cop Bits" event_name="spawn_cop" start_amount="1" end_amount="499"
+		    safe_allowed="true" cooldown_allowed="true" vote_allowed="true" pimp_pot_add="50" />
+        <bit_event event_title="Screaming Bits" event_name="spawn_screamer" start_amount="500" end_amount="999"
+		    safe_allowed="true" cooldown_allowed="true" vote_allowed="true" pimp_pot_add="100" />
+        <bit_event event_title="Demo Bits" event_name="spawn_demo" start_amount="1000" end_amount="1999"
+		    safe_allowed="true" cooldown_allowed="true" vote_allowed="true" pimp_pot_add="150" />
+        <bit_event event_title="Wight Bits" event_name="spawn_wight" start_amount="2000" end_amount="2999"
+		    safe_allowed="true" cooldown_allowed="true" vote_allowed="true" pimp_pot_add="200" />
+        <bit_event event_title="Radiated Spider Bits" event_name="spawn_spider_rad" start_amount="3000" end_amount="3999"
+		    safe_allowed="true" cooldown_allowed="true" vote_allowed="true" pimp_pot_add="250" />
+        <bit_event event_title="Radiated Wight Bits" event_name="spawn_wightrad" start_amount="4000" end_amount="4999"
+		    safe_allowed="true" cooldown_allowed="true" vote_allowed="true" pimp_pot_add="300" />
+        <bit_event event_title="Hella Bits" event_name="vote_h_random_tough_rad" start_amount="5000" end_amount="9999"
+		    safe_allowed="true" cooldown_allowed="true" vote_allowed="true" pimp_pot_add="400" />
+        <bit_event event_title="Oh Shit Bits" event_name="vote_h_random_tough_immortal_b" start_amount="10000"
+		    safe_allowed="true" cooldown_allowed="true" vote_allowed="true" pimp_pot_add="500" />
+
+<!-- Raid Events
+    event_title - The title that shows in chat when the event fires.
+    event_name - The game event that is activated.
+    start_amount - The minimum amount of viewers to start the event.
+    end_amount - The maximum amount of viewers to start the event.
+    sp_add_amount - The amount of special points added when this is activated.
+    pp_add_amount - The amount of pimp points added when this is activated.
+    safe_allowed - If it's allowed to be used in safe zone, if not it queues.
+    cooldown_allowed - If it's allowed to be used during cooldown, if not it queues.
+    vote_allowed - If it's allowed to be used during vote event, if not it queues.
+    pimp_pot_add - Adds the amount to the pimp pot.
+-->
+    <!-- Raiding the precious with 1-2 Raiders -->
+        <raid_event event_title="Cop Raid" event_name="spawn_cop" start_amount="1" end_amount="2" safe_allowed="true"
+                    cooldown_allowed="true" vote_allowed="true" pimp_pot_add="100"
+                    sp_add_amount="50" pp_add_amount="50" />
+
+    <!-- Raiding the precious With 3-5 Raiders Dey Is -->
+        <raid_event event_title="Sidekick Raid" event_name="spawn_sidekick" start_amount="3" end_amount="5" safe_allowed="true"
+                    cooldown_allowed="true" vote_allowed="true" pimp_pot_add="200"
+                    sp_add_amount="100" pp_add_amount="100" />
+
+<!-- Gift Sub Events
+		event_title - The title that shows in chat when the event fires.
+		event_name - The game event that is activated.
+		sp_add_amount - The amount of special points added when this is activated. (Gift Subs already add SP by default based on number of subs.)
+		pp_add_amount - The amount of pimp points added when this is activated. (Gift Subs already add SP by default based on number of subs.)
+		start_amount - The minimum amount of subs gifted to start the event.
+		end_amount - The maximum amount of subs gifted to start the event.
+		safe_allowed - If it's allowed to be used in safe zone, if not it queues.
+		cooldown_allowed - If it's allowed to be used during cooldown, if not it queues.
+		vote_allowed - If it's allowed to be used during vote event, if not it queues.
+		pimp_pot_add - Adds the amount to the pimp pot.
+	-->
+	<gift_sub_event event_title="Bear Gift Sub" event_name="spawn_bear" start_amount="1" end_amount="3"
+		safe_allowed="true" cooldown_allowed="true" vote_allowed="true" pimp_pot_add="100"/>
+    <gift_sub_event event_title="Demo Gift Sub" event_name="spawn_demo" start_amount="4" end_amount="5"
+		safe_allowed="true" cooldown_allowed="true" vote_allowed="true" pimp_pot_add="200"/>
+    <gift_sub_event event_title="wight Gift Sub" event_name="spawn_wight" start_amount="6" end_amount="10"
+        safe_allowed="true" cooldown_allowed="true" vote_allowed="true" pimp_pot_add="500"/>
+<!-- Sub Events
+    event_title - The title that shows in chat when the event fires.
+    event_name - The game event that is activated.
+    sp_add_amount - The amount of special points added when this is activated. (Subs already add SP by default based on number of subs.)
+    pp_add_amount - The amount of pimp points added when this is activated. (Subs already add SP by default based on number of subs.)
+    start_amount - The minimum amount of months you've been subbed to start the event.
+    end_amount - The maximum amount of months you've been subbed to start the event.
+    safe_allowed - If it's allowed to be used in safe zone, if not it queues.
+    cooldown_allowed - If it's allowed to be used during cooldown, if not it queues.
+    vote_allowed - If it's allowed to be used during vote event, if not it queues.
+    pimp_pot_add - Adds the amount to the pimp pot.
+-->
+	<sub_event event_title="Wolf Sub" event_name="spawn_wolf" start_amount="0"
+			safe_allowed="false" cooldown_allowed="false" vote_allowed="false" pimp_pot_add="3" />
+
+<!-- Channel Point Events
+    channel_point_title - The title of the channel point redemption.
+    event_title - The title that shows in chat when the event fires.
+    event_name - The game event that is activated.
+    sp_add_amount - The amount of special points added when this is activated.
+    pp_add_amount - The amount of pimp points added when this is activated.
+    safe_allowed - If it's allowed to be used in safe zone, if not it queues.
+    cooldown_allowed - If it's allowed to be used during cooldown, if not it queues.
+    vote_allowed - If it's allowed to be used during vote event, if not it queues.
+    pimp_pot_add - Adds the amount to the pimp pot.
+
+-->
+	<channel_point_event channel_point_title="Redeem PP" event_title="Channel Point PP" pp_add_amount="1000" />
+	<channel_point_event channel_point_title="Vulture" event_title="Channel Point Vulture" event_name="spawn_vulture"
+		safe_allowed="false" cooldown_allowed="false" vote_allowed="false" pimp_pot_add="3" />
+
+
+    </append>
+</config>

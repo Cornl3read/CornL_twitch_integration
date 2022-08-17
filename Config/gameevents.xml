@@ -1,0 +1,118 @@
+<config>
+	<set xpath="/gameevents/@max_entities">64</set>
+	<append xpath="/gameevents">
+<!-- Not So Friendly Spawns -->
+		<!-- screamer -->
+		<action_sequence name="spawn_screamer" template="spawn_single">
+			<variable name="zombiename" value="zombieScreamer" />
+			<variable name="alertsound" value="zombieferalalert" />
+		</action_sequence>
+
+
+<!-- Friendly Spawns -->
+<!-- Wolf -->
+		<action_sequence name="spawn_sidekick">
+			<action class="AddPartyToGroup">
+				<property name="phase" value="0" />
+				<property name="group_name" value="goodGuys" />
+			</action>
+			<action class="Delay">
+				<property name="time" value="3" />
+				<property name="phase" value="0" />
+			</action>
+			<action class="PlaySound">
+				<property name="sound" value="wolfalert" />
+				<property name="phase" value="1" />
+			</action>
+			<action class="SpawnEntity">
+				<property name="phase" value="1" />
+				<property name="min_distance" value="5" />
+				<property name="max_distance" value="8" />
+				<property name="entity_names" value="animalWolfFriend" param1="zombiename" />
+				<property name="add_to_group" value="goodGuys, turrets, player" />
+				<property name="add_to_group" value="turrets" />
+				<property name="spawn_count" value="1" />
+				<property name="party_addition" value="1" />
+			</action>
+		</action_sequence>
+
+
+		<!-- Dire Wolf -->
+		<action_sequence name="spawn_bigsidekick">
+			<action class="AddPartyToGroup">
+				<property name="phase" value="0" />
+				<property name="group_name" value="goodGuys" />
+			</action>
+			<action class="Delay">
+				<property name="time" value="3" />
+				<property name="phase" value="0" />
+			</action>
+			<action class="PlaySound">
+				<property name="sound" value="wolfalert" />
+				<property name="phase" value="1" />
+			</action>
+			<action class="SpawnEntity">
+				<property name="phase" value="1" />
+				<property name="min_distance" value="5" />
+				<property name="max_distance" value="8" />
+				<property name="entity_names" value="animalBigWolfFriend" param1="zombiename" />
+				<property name="add_to_group" value="goodGuys, turrets, player" />
+				<property name="add_to_group" value="turrets" />
+				<property name="spawn_count" value="1" />
+				<property name="party_addition" value="1" />
+			</action>
+		</action_sequence>
+
+<!-- Zombie Bear -->
+		<action_sequence name="spawn_deadsidekick">
+			<action class="AddPartyToGroup">
+				<property name="phase" value="0" />
+				<property name="group_name" value="goodGuys" />
+			</action>
+			<action class="Delay">
+				<property name="time" value="3" />
+				<property name="phase" value="0" />
+			</action>
+			<action class="PlaySound">
+				<property name="sound" value="bearalert" />
+				<property name="phase" value="1" />
+			</action>
+			<action class="SpawnEntity">
+				<property name="phase" value="1" />
+				<property name="min_distance" value="5" />
+				<property name="max_distance" value="8" />
+				<property name="entity_names" value="animalDeadBearFriend" param1="zombiename" />
+				<property name="add_to_group" value="goodGuys, turrets, player" />
+				<property name="add_to_group" value="turrets" />
+				<property name="spawn_count" value="1" />
+				<property name="party_addition" value="1" />
+			</action>
+		</action_sequence>
+
+		<!-- That One Skank everybody Hates -->
+		<action_sequence name="spawn_superfriend">
+			<action class="AddPartyToGroup">
+				<property name="phase" value="0" />
+				<property name="group_name" value="goodGuys" />
+			</action>
+			<action class="Delay">
+				<property name="time" value="3" />
+				<property name="phase" value="0" />
+			</action>
+			<action class="PlaySound">
+				<property name="sound" value="boaralert" />
+				<property name="phase" value="1" />
+			</action>
+			<action class="SpawnEntity">
+				<property name="phase" value="1" />
+				<property name="min_distance" value="5" />
+				<property name="max_distance" value="8" />
+				<property name="entity_names" value="animalBossGraceFriend" param1="zombiename" />
+				<property name="add_to_group" value="goodGuys, turrets, player" />
+				<property name="add_to_group" value="turrets" />
+				<property name="spawn_count" value="1" />
+				<property name="party_addition" value="1" />
+			</action>
+		</action_sequence>
+    </append>
+</config>
